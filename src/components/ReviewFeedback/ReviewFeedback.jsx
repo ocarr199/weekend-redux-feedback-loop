@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom'
-
-
+import axios from 'axios';
 function ReviewFeedback() {
     const history = useHistory();
 
@@ -19,7 +18,7 @@ function ReviewFeedback() {
 //   ); 
 
     const handleClick = () => {
-        axios.post('/api/order', {
+        axios.post('/feedback', {
             feeling: feedback.feeling,
             understanding: feedback.understanding,
             support: feedback.support,
