@@ -40,5 +40,20 @@ router.get('/', (req, res) => {
     });
 })
 
+// Delete Route
+router.delete('/:id', (req, res) => {
+    const deleteID = req.params.id
+    // delete item with id of deleteId
+    const queryText = `DELETE FROM "feedback" WHERE "id" = $1;`
+    pool.query(queryText, [deleteID])
+        .then(result => {
+            res.sendStatus(204)
+        }).catch(err => {
+            console.error(err)
+            res.sendStatus(500);
+        })
+})
+// End Delete Route
+
 
 module.exports = router;

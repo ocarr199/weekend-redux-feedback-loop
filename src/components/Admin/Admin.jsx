@@ -8,6 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function Admin() {
 
@@ -27,6 +29,7 @@ const getFeedbackHistory = () => {
         console.log(err);
     })
 
+ 
 
     const useStyles = makeStyles({
         table: {
@@ -57,7 +60,23 @@ const getFeedbackHistory = () => {
                     <TableCell align="right">{feedback.support}</TableCell>
                     <TableCell align="right">{feedback.comments}</TableCell>
                     <TableCell align="right">
-                      <Button></Button>
+                    <Button
+                    onClick={() => {
+                      axios.delete(`/feedback/${feedback.id}`)
+                          .then(response => {
+                              console.log(response);
+                              getFeedbackHistory();
+                          }).catch(err => {
+                              console.log(err)
+                          })
+                  }}
+        variant="contained"
+        color="secondary"
+
+        startIcon={<DeleteIcon />}
+      >
+        Delete
+      </Button>
                       </TableCell>
                     <TableCell align="right">{feedback.comments}</TableCell>
                   </TableRow>
