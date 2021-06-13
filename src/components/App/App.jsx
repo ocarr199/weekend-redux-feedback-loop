@@ -6,7 +6,7 @@ import FeelingToday from '../FeelingToday/FeelingToday';
 import UnderstandingContent from '../UnderstandingContent/UnderstandingContent';
 import Comments from '../Comments/Comments';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback'
-import {Route, HashRouter as Router} from 'react-router-dom';
+import { Route, HashRouter as Router } from 'react-router-dom';
 import ThankYou from '../ThankYou/ThankYou';
 import Navbar from '../Navbar/Navbar'
 import Admin from '../Admin/Admin';
@@ -19,47 +19,47 @@ function App() {
   return (
 
     <Router>
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-{/* navbar to go to diferrent pages in the application */}
-    <Navbar />
-      </header>
-    <Route path='/' exact >
-     <Home />
+      <div className='App'>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+          <h4>Don't forget it!</h4>
+          {/* navbar to go to diferrent pages in the application */}
+          <Navbar />
+        </header>
+        <Route path='/' exact >
+          <Home />
         </Route>
-      <Route path='/Feeling' >
-      <FeelingToday />
+        <Route path='/Feeling' >
+          <FeelingToday />
         </Route>
 
         <Route path='/Understanding'>
-        <UnderstandingContent />
-        </Route> 
-        
-        <Route path='/Supported' >
-        <BeingSupported />
+          <UnderstandingContent />
         </Route>
-  
+
+        <Route path='/Supported' >
+          <BeingSupported />
+        </Route>
+
         <Route path='/Comments' >
-        <Comments />
+          <Comments />
         </Route>
 
         <Route path='/Review' >
-        {console.log(Route)}
-       <ReviewFeedback />
+          {console.log(Route)}
+          <ReviewFeedback />
         </Route>
 
         <Route path='/ThankYou' >
-       <ThankYou />
+          <ThankYou />
         </Route>
         <Route path='/Admin' >
-          <Admin/>
+          <Admin />
         </Route>
-    </div>
+      </div>
     </Router>
   );
- 
+
 }
 
 export default App;

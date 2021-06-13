@@ -19,14 +19,14 @@ function BeingSupported() {
 
     const handleClick = () => {
 
-// sending state to redux
+        // sending state to redux
         dispatch({
             type: 'ADD_SUPPORT',
             payload: support
         })
         history.push('/Comments')
     }
-// go back a page
+    // go back a page
     const goBack = () => {
         history.goBack();
     }
@@ -34,29 +34,29 @@ function BeingSupported() {
     console.log(support)
     return (
         <>
-           <Button 
-          onClick={goBack}
-        variant="contained" 
-        color="primary">
-           Previous
+            <Button
+                onClick={goBack}
+                variant="contained"
+                color="primary">
+                Previous
          </Button>
             <h1>How well are you being supported?</h1>
-         
+
             <form onSubmit={handleClick}>
-            <TextField
-                onChange={handleSupport}
-                // makes data required
-                required={true}
-                id="standard-number"
-                type="number"
-                label="feeling?" />
-            <Button
-                variant="contained"
-                color="primary"
-                type="submit">
-                Next
+                <TextField
+                    onChange={handleSupport}
+                    // makes data required
+                    required={true}
+                    id="standard-number"
+                    type="number"
+                    label="feeling?" />
+                <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit">
+                    Next
          </Button>
-         </form>
+            </form>
         </>
     )
 }

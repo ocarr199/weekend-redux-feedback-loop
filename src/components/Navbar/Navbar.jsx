@@ -22,19 +22,19 @@ function Navbar() {
     const goToComments = () => {
         history.push('/Comments')
     }
-        return (
-            <>
-                <AppBar position="static">
-                    <Toolbar>
+    return (
+        <>
+            <AppBar position="static">
+                <Toolbar>
 
-                        <Button onClick={goToFeeling} color="inherit">Feeling?</Button>
-                        <Button onClick={goToUnderstanding} color="inherit">Understanding?</Button>
-                        <Button onClick={goToSupported} color="inherit">Supported?</Button>
-                        <Button onClick={goToComments} color="inherit">Comments?</Button>
-                    </Toolbar>
-                </AppBar>
-            </>
-        )
-    }
+                    <Button onClick={goToFeeling} color="inherit">Feeling?</Button>
+                    <Button onClick={goToUnderstanding} color="inherit">Understanding?</Button>
+                    <Button onClick={goToSupported} color="inherit">Supported?</Button>
+                    <Button onClick={goToComments} color="inherit">Comments?</Button>
+                </Toolbar>
+            </AppBar>
+        </>
+    )
+}
 
-    export default Navbar
+export default Navbar

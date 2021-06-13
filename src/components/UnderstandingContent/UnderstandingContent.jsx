@@ -31,7 +31,7 @@ function UnderstandingContent() {
 
     console.log(understanding)
     return (
-            <>
+        <>
 
             <Button
                 onClick={goBack}
@@ -44,25 +44,25 @@ function UnderstandingContent() {
 
             <form onSubmit={handleClick}>
 
-                    <TextField
-                        onChange={handleUnderstanding}
-                        required={true}
-                        id="standard-number"
-                        type="number"
-                        label="Understanding?" /> 
-                      
-             <Button
-                        variant="contained"
-                        color="primary"
-                        type="submit">
-                        Next
+                <TextField
+                    onChange={handleUnderstanding}
+                    required={true}
+                    id="standard-number"
+                    type="number"
+                    label="Understanding?" />
+
+                <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit">
+                    Next
          </Button>
 
 
 
-         </form >
-       
-         </>
+            </form >
+
+        </>
     )
 }
 export default UnderstandingContent

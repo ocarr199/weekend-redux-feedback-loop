@@ -57,7 +57,7 @@ function ReviewFeedback() {
       <h1>Review Your Feedback</h1>
       {/* card for feedback */}
 
-      <Card variant="outlined" style={{display: 'inline-block'}}>
+      <Card variant="outlined" style={{ display: 'inline-block' }}>
         <CardContent>
           <Typography variant="h5" component="h2">
             Your Feedback:

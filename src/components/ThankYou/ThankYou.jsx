@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom'
 import './Thanksyou.css'
-function ThankYou (){
+function ThankYou() {
 
 
     const history = useHistory();
@@ -16,18 +16,18 @@ function ThankYou (){
     }
     return (
         <>
-        <h1>Thank you for the feedback!</h1>
-        <div className="restart">
-        <Button
-            onClick={restart}
-                variant="contained"
-                color="primary"
-                type="submit">
-                submit More
+            <h1>Thank you for the feedback!</h1>
+            <div className="restart">
+                <Button
+                    onClick={restart}
+                    variant="contained"
+                    color="primary"
+                    type="submit">
+                    submit More
          </Button>
-         </div>
-         <Button
-            onClick={admin}
+            </div>
+            <Button
+                onClick={admin}
                 variant="contained"
                 color="primary"
                 type="submit">
