@@ -33,8 +33,19 @@ function ReviewFeedback() {
         })
         history.push('/ThankYou')
     }
+
+    const goBack = () => {
+        history.goBack();
+    }
+    
     return(
         <>
+              <Button 
+          onClick={goBack}
+        variant="contained" 
+        color="primary">
+           Previous
+         </Button>
         <h1>Review Your Feedback</h1>
         <ul>
             <li>Feelings: {feedback.feeling}</li>

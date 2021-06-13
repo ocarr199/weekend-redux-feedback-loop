@@ -27,9 +27,20 @@ function Comments(){
 
         history.push('/Review')
     }
+
+    const goBack = () => {
+        history.goBack();
+    }
+
     console.log(comments)
     return(
         <>
+            <Button 
+          onClick={goBack}
+        variant="contained" 
+        color="primary">
+           Previous
+         </Button>
         <h1>Any comments you want to leave??</h1>
         <TextField 
         style ={{width: '80%'}}

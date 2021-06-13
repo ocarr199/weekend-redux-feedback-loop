@@ -26,10 +26,22 @@ function BeingSupported() {
         })
         history.push('/Comments')
     }
+
+    const goBack = () => {
+        history.goBack();
+    }
+
     console.log(support)
     return (
         <>
+           <Button 
+          onClick={goBack}
+        variant="contained" 
+        color="primary">
+           Previous
+         </Button>
             <h1>How well are you being supported?</h1>
+         
             <form onSubmit={handleClick}>
             <TextField
                 onChange={handleSupport}

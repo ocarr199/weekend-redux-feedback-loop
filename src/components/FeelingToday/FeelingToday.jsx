@@ -8,7 +8,7 @@ function FeelingToday() {
     const history = useHistory();
     const dispatch = useDispatch();
     
-    let[feeling, setFeeling] = useState(0);
+    let[feeling, setFeeling] = useState('');
 
     const handleFeeling = (event) => {
         setFeeling(event.target.value);
@@ -36,13 +36,15 @@ function FeelingToday() {
             max={10}
             id="standard-number" 
             type="number" 
-            label="feeling?" />
+            label="feeling?" 
+            value={feeling}
+            />
           
             <Button 
             variant="contained" 
             color="primary"
             type="submit">
-                Primary
+                Next
              </Button>
              </form>
         </>

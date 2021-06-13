@@ -8,8 +8,11 @@ import Comments from '../Comments/Comments';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback'
 import {Route, HashRouter as Router} from 'react-router-dom';
 import ThankYou from '../ThankYou/ThankYou';
-
+import Navbar from '../Navbar/Navbar'
 function App() {
+
+
+
 
   return (
     <Router>
@@ -17,7 +20,11 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
+
+    <Navbar />
       </header>
+    
+
 
       <Route path='/' exact>
       <FeelingToday />
