@@ -19,14 +19,14 @@ function BeingSupported() {
 
     const handleClick = () => {
 
-
+// sending state to redux
         dispatch({
             type: 'ADD_SUPPORT',
             payload: support
         })
         history.push('/Comments')
     }
-
+// go back a page
     const goBack = () => {
         history.goBack();
     }
@@ -45,6 +45,7 @@ function BeingSupported() {
             <form onSubmit={handleClick}>
             <TextField
                 onChange={handleSupport}
+                // makes data required
                 required={true}
                 id="standard-number"
                 type="number"

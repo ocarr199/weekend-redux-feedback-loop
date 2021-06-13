@@ -17,19 +17,18 @@ function App() {
 
 
   return (
+
     <Router>
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
-
+{/* navbar to go to diferrent pages in the application */}
     <Navbar />
       </header>
     <Route path='/' exact >
      <Home />
         </Route>
-
-
       <Route path='/Feeling' >
       <FeelingToday />
         </Route>

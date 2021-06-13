@@ -4,11 +4,11 @@ import './Home.css'
 
 function Home() {
     const history = useHistory();
-    
+    // getting started with leaving feedback
 const getStarted = () => {
     history.push('/Feeling')
 }
-
+// going to the admin page
 const admin = () => {
     history.push('/Admin')
 

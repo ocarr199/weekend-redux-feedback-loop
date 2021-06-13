@@ -8,6 +8,8 @@ import { useHistory } from 'react-router-dom'
 
 function Navbar() {
     const history = useHistory();
+
+    // each goes to different pages
     const goToFeeling = () => {
         history.push('/')
     }

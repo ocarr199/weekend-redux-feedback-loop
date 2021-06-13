@@ -31,6 +31,7 @@ function FeelingToday() {
             <form onSubmit={handleClick}>
             <TextField 
             onChange={handleFeeling}
+            // data is required
             required={true} 
             min={0}
             max={10}

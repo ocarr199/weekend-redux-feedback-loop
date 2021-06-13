@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
-
+// Router for posting feedback to server
 // POST Route
 router.post('/', (req, res) => {
     //destructure keys out of req.body
@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
 
 })
 // End POST Route
-
+// .Router to get data history on admin page
 router.get('/', (req, res) => {
     // Find all orders and return them
     console.log('in router.GET')
