@@ -27,17 +27,20 @@ function UnderstandingContent(){
     return(
         <>
         <h1>How well are you understanding the content?</h1>
+        <form onSubmit={handleClick}>
         <TextField 
         onChange={handleUnderstanding}
-        required 
+        required={true}
         id="standard-number" 
         type="number" 
         label="Understanding?" />
         <Button 
-        onClick={handleClick}
-        variant="contained" color="primary">
+        variant="contained" 
+        color="primary"
+        type="submit">
             Next
          </Button>
+         </form >
          </>
     )
 }

@@ -32,8 +32,11 @@ function Comments(){
         <>
         <h1>Any comments you want to leave??</h1>
         <TextField 
+        style ={{width: '80%'}}
         onChange={handleComments}
-        required 
+        multiline
+        rows={3}
+        rowsMax={4}
         id="standard-number"  
         label="Comments?" />
         <Button 

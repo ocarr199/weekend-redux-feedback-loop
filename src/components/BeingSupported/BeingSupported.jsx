@@ -1,16 +1,16 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom'
 
-function BeingSupported(){
+function BeingSupported() {
 
     const history = useHistory();
     const dispatch = useDispatch();
 
 
-    let[support, setSupport] = useState(0);
+    let [support, setSupport] = useState(0);
 
     const handleSupport = (event) => {
         setSupport(event.target.value);
@@ -19,7 +19,7 @@ function BeingSupported(){
 
     const handleClick = () => {
 
-    
+
         dispatch({
             type: 'ADD_SUPPORT',
             payload: support
@@ -27,21 +27,24 @@ function BeingSupported(){
         history.push('/Comments')
     }
     console.log(support)
-    return(
+    return (
         <>
-        <h1>How well are you being supported?</h1>
-        <TextField 
-        onChange={handleSupport}
-        required
-         id="standard-number"
-          type="number" 
-          label="feeling?" />
-        <Button 
-        onClick={handleClick}
-        variant="contained" color="primary">
-        Next
+            <h1>How well are you being supported?</h1>
+            <form onSubmit={handleClick}>
+            <TextField
+                onChange={handleSupport}
+                required={true}
+                id="standard-number"
+                type="number"
+                label="feeling?" />
+            <Button
+                variant="contained"
+                color="primary"
+                type="submit">
+                Next
          </Button>
-         </>
+         </form>
+        </>
     )
 }
 export default BeingSupported

@@ -16,7 +16,7 @@ function FeelingToday() {
     }
 
     const handleClick = () => {
-
+        event.preventDefault();
         dispatch({
             type: 'ADD_FEELING',
             payload: feeling
@@ -28,17 +28,23 @@ function FeelingToday() {
     return (
         <>
             <h1>How are you feeling today?</h1>
+            <form onSubmit={handleClick}>
             <TextField 
             onChange={handleFeeling}
-            required 
+            required={true} 
+            min={0}
+            max={10}
             id="standard-number" 
             type="number" 
             label="feeling?" />
+          
             <Button 
-            onClick={handleClick}
-            variant="contained" color="primary">
+            variant="contained" 
+            color="primary"
+            type="submit">
                 Primary
              </Button>
+             </form>
         </>
     )
 }
