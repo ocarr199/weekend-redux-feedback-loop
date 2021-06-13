@@ -9,6 +9,7 @@ import ReviewFeedback from '../ReviewFeedback/ReviewFeedback'
 import {Route, HashRouter as Router} from 'react-router-dom';
 import ThankYou from '../ThankYou/ThankYou';
 import Navbar from '../Navbar/Navbar'
+import Admin from '../Admin/Admin';
 function App() {
 
 
@@ -43,16 +44,20 @@ function App() {
         </Route>
 
         <Route path='/Review' >
+        {console.log(Route)}
        <ReviewFeedback />
         </Route>
 
         <Route path='/ThankYou' >
        <ThankYou />
         </Route>
- 
+        <Route path='/Admin' >
+          <Admin/>
+        </Route>
     </div>
     </Router>
   );
+ 
 }
 
 export default App;
