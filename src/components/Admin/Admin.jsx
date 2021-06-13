@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 function Admin() {
 
@@ -44,6 +45,8 @@ const getFeedbackHistory = () => {
                   <TableCell align="right">Understanding</TableCell>
                   <TableCell align="right">Support</TableCell>
                   <TableCell align="right">Comments</TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -52,6 +55,10 @@ const getFeedbackHistory = () => {
                     <TableCell align="right">{feedback.feeling}</TableCell>
                     <TableCell align="right">{feedback.understanding}</TableCell>
                     <TableCell align="right">{feedback.support}</TableCell>
+                    <TableCell align="right">{feedback.comments}</TableCell>
+                    <TableCell align="right">
+                      <Button></Button>
+                      </TableCell>
                     <TableCell align="right">{feedback.comments}</TableCell>
                   </TableRow>
                 ))}

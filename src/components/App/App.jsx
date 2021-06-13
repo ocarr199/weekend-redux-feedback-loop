@@ -10,6 +10,7 @@ import {Route, HashRouter as Router} from 'react-router-dom';
 import ThankYou from '../ThankYou/ThankYou';
 import Navbar from '../Navbar/Navbar'
 import Admin from '../Admin/Admin';
+import Home from '../Home/Home';
 function App() {
 
 
@@ -24,10 +25,12 @@ function App() {
 
     <Navbar />
       </header>
-    
+    <Route path='/' exact >
+     <Home />
+        </Route>
 
 
-      <Route path='/' exact>
+      <Route path='/Feeling' >
       <FeelingToday />
         </Route>
 
